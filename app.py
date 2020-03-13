@@ -3,6 +3,7 @@ from noti import send
 
 COIN_TICKERS = ['KRW-BTC', 'KRW-ETH']
 msg = ''
+
 for coin in COIN_TICKERS:
   BASE_URL = "https://crix-api-cdn.upbit.com/v1/crix/candles/minutes/1?code=CRIX.UPBIT.%s&count=0"%(coin)
 
