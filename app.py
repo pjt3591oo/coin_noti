@@ -12,12 +12,12 @@ for coin in COIN_TICKERS:
 
   exchange='업비트'
   code = coin
-  openingPrice = data['openingPrice']
-  highPrice = data['highPrice']
-  lowPrice = data['lowPrice']
-  tradePrice = data['tradePrice']
-  candleAccTradeVolume = data['candleAccTradeVolume']
-  candleAccTradePrice = data['candleAccTradePrice']
+  openingPrice = "{:,}".format(data['openingPrice'])
+  highPrice = "{:,}".format(data['highPrice'])
+  lowPrice = "{:,}".format(data['lowPrice'])
+  tradePrice = "{:,}".format(data['tradePrice'])
+  candleAccTradeVolume = "{:,}".format(data['candleAccTradeVolume'])
+  candleAccTradePrice = "{:,}".format(data['candleAccTradePrice'])
 
   msg += '''
 거래소: %s,
@@ -32,3 +32,4 @@ for coin in COIN_TICKERS:
   '''%(exchange, code, openingPrice, highPrice, lowPrice, tradePrice, candleAccTradeVolume, candleAccTradePrice)
 
 send(msg)
+# print(msg)
